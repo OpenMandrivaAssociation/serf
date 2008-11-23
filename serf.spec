@@ -5,7 +5,7 @@
 Summary:	A high-performance asynchronous HTTP client library
 Name:		serf
 Version:	0.2.0
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	Apache License
 Group:		System/Libraries
 URL:		http://code.google.com/p/serf/
@@ -57,6 +57,12 @@ to compile %{name} applications.
 # don't link against ldap libs
 perl -pi -e "s|apu_config --link-libtool --libs|apu_config --link-libtool --avoid-ldap --libs|g" configure*
 
+# lib64 fix
+perl -pi -e "s|/lib\b|/%{_lib}|g" configure*
+
+# no static builds
+perl -pi -e "s|-static||g" Makefile*
+
 %build
 %serverbuild
 export CFLAGS="$CFLAGS -fPIC"
@@ -94,4 +100,3 @@ rm -rf %{buildroot}
 %attr(0644,root,root) %{_includedir}/*.h
 %attr(0755,root,root) %{_libdir}/*.so
 %attr(0644,root,root) %{_libdir}/*.*a
-
