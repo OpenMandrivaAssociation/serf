@@ -4,8 +4,8 @@
 
 Summary:	A high-performance asynchronous HTTP client library
 Name:		serf
-Version:	0.3.1
-Release:	%mkrel 4
+Version:	0.7.0
+Release:	%mkrel 1
 License:	Apache License
 Group:		System/Libraries
 URL:		http://code.google.com/p/serf/
@@ -78,6 +78,9 @@ make check
 rm -rf %{buildroot}
 
 %makeinstall_std
+
+# enable strip and debug packages
+chmod 755 %{buildroot}%{_libdir}/libserf*.so*
 
 %if %mdkversion < 200900
 %post -n %{libname} -p /sbin/ldconfig
