@@ -5,7 +5,7 @@
 Summary:	A high-performance asynchronous HTTP client library
 Name:		serf
 Version:	0.7.0
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	Apache License
 Group:		System/Libraries
 URL:		http://code.google.com/p/serf/
@@ -13,7 +13,7 @@ Source0:	http://serf.googlecode.com/files/%{name}-%{version}.tar.bz2
 BuildRequires:	apr-devel
 BuildRequires:	apr-util-devel
 BuildRequires:	autoconf2.5
-BuildRequires:	automake1.7
+BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	openssl-devel
 BuildRequires:	zlib-devel
