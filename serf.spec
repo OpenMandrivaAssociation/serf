@@ -4,7 +4,7 @@
 
 Summary:	A high-performance asynchronous HTTP client library
 Name:		serf
-Version:	0.7.1
+Version:	0.7.2
 Release:	%mkrel 1
 License:	Apache License
 Group:		System/Libraries
