@@ -1,11 +1,11 @@
-%define	major 0
+%define	major 1
 %define libname %mklibname %{name} %{major}
 %define develname %mklibname %{name} -d
 
 Summary:	A high-performance asynchronous HTTP client library
 Name:		serf
 Version:	1.0.0
-Release:	%mkrel 1
+Release:	2
 License:	Apache License
 Group:		System/Libraries
 URL:		http://code.google.com/p/serf/
@@ -96,7 +96,7 @@ rm -rf %{buildroot}
 %files -n %{libname}
 %defattr(-,root,root)
 %doc CHANGES LICENSE NOTICE README design-guide.txt
-%attr(0755,root,root) %{_libdir}/lib*.so.%{major}*
+%attr(0755,root,root) %{_libdir}/libserf-%{major}.so.*
 
 %files -n %{develname}
 %defattr(-,root,root)
