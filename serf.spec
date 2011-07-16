@@ -17,7 +17,6 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	openssl-devel
 BuildRequires:	zlib-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The serf library is a C-based HTTP client library built upon the Apache
@@ -51,7 +50,6 @@ This package contains all of the development files that you will need in order
 to compile %{name} applications.
 
 %prep
-
 %setup -q
 
 # don't link against ldap libs
@@ -75,31 +73,16 @@ export CFLAGS="$CFLAGS -fPIC"
 #make check
 
 %install
-rm -rf %{buildroot}
-
 %makeinstall_std
 
 # enable strip and debug packages
 chmod 755 %{buildroot}%{_libdir}/libserf*.so*
 
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%endif
-
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
-
-%clean
-rm -rf %{buildroot}
-
 %files -n %{libname}
-%defattr(-,root,root)
 %doc CHANGES LICENSE NOTICE README design-guide.txt
 %attr(0755,root,root) %{_libdir}/libserf-%{major}.so.*
 
 %files -n %{develname}
-%defattr(-,root,root)
 %attr(0644,root,root) %{_includedir}/*.h
 %attr(0755,root,root) %{_libdir}/*.so
 %attr(0644,root,root) %{_libdir}/*.*a
