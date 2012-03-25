@@ -17,6 +17,7 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	openssl-devel
 BuildRequires:	zlib-devel
+BuildRequires:	db2-devel
 
 %description
 The serf library is a C-based HTTP client library built upon the Apache
