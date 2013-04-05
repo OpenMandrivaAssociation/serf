@@ -1,5 +1,5 @@
 %define	major 0
-%define libname %mklibname %{name} %{major}
+%define libname %mklibname %{name}1_ %{major}
 %define develname %mklibname %{name} -d
 
 Summary:	A high-performance asynchronous HTTP client library
