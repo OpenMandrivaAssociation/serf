@@ -15,6 +15,7 @@ BuildRequires:	pkgconfig(apr-util-1)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	zlib-devel
 BuildRequires:	db-devel
+BuildRequires:	openldap-devel
 BuildRequires:	scons
 
 %description
