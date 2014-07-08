@@ -58,6 +58,7 @@ scons \
     PREFIX=%{_prefix} \
     LIBDIR=%{_libdir} \
     APR=%{_prefix} \
+    CC=%{__cc} \
     OPENSSL=%{_prefix} \
     ZLIB=%{_prefix} \
     DEBUG=yes \
