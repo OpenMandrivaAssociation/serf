@@ -1,6 +1,7 @@
 %define	major 1
 %define libname %mklibname %{name}1_ %{major}
 %define develname %mklibname %{name} -d
+%define _disable_lto 1
 
 Summary:	A high-performance asynchronous HTTP client library
 Name:		serf
