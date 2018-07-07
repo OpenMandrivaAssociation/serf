@@ -15,6 +15,9 @@ Patch0:		serf-1.3.9-lib64.patch
 BuildRequires:	pkgconfig(apr-1)
 BuildRequires:	pkgconfig(apr-util-1)
 BuildRequires:	pkgconfig(openssl)
+BuildRequires:	pkgconfig(expat)
+BuildRequires:	pkgconfig(uuid)
+BuildRequires:	pkgconfig(libxcrypt)
 BuildRequires:	zlib-devel
 BuildRequires:	db-devel
 BuildRequires:	openldap-devel
