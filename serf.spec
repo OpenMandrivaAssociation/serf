@@ -9,7 +9,7 @@ Version:	1.3.9
 Release:	7
 License:	Apache License
 Group:		System/Libraries
-URL:		http://code.google.com/p/serf/
+URL:		https://code.google.com/p/serf/
 Source0:	https://www.apache.org/dist/serf/%{name}-%{version}.tar.bz2
 Patch0:		lib%{name}-norpath.patch
 Patch1:		lib%{name}-python3.patch
